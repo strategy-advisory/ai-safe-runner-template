@@ -6,7 +6,7 @@ Primary maintainer
 
 ## Repository URL
 
-Fill in after publishing the public repository.
+https://github.com/strategy-advisory/ai-safe-runner-template
 
 ## Why does this repository qualify? (500 chars max)
 
