@@ -1,0 +1,2 @@
+{"timestamp":"2026-06-04T09:00:00Z","job_id":"JOB-2026-06-04-001","mode":"dry-run","actor":"codex","target":"email-provider","result":"complete","artifact_refs":["evidence/dry-run-report.md"],"notes":"Dry-run only. No external send executed."}
+{"timestamp":"2026-06-04T09:20:00Z","job_id":"JOB-2026-06-04-002","mode":"live","actor":"human-operator","target":"email-provider","result":"blocked","artifact_refs":["evidence/approval-missing.md"],"notes":"Live run blocked because approval record was missing."}

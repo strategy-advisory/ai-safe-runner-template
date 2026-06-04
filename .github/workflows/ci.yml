@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON examples
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          files = [
+              Path("examples/job-request.example.json"),
+              Path("examples/audit-log.example.jsonl"),
+          ]
+
+          json.loads(files[0].read_text(encoding="utf-8"))
+          for line in files[1].read_text(encoding="utf-8").splitlines():
+              if line.strip():
+                  json.loads(line)
+          print("JSON examples look valid")
+          PY

@@ -1,0 +1,26 @@
+{
+  "job_id": "JOB-2026-06-04-001",
+  "mode": "dry-run",
+  "requested_by": "team-owner",
+  "target_system": "email-provider",
+  "action": "prepare outbound send batch",
+  "business_reason": "Validate workflow and approval path before any live sends.",
+  "inputs": [
+    "approved recipient segment",
+    "message template id",
+    "send window"
+  ],
+  "risk_summary": [
+    "Wrong audience selection",
+    "Unapproved live send",
+    "Missing rollback owner"
+  ],
+  "rollback_plan": "Stop queue, revoke send credential, and invalidate current batch id.",
+  "approval": {
+    "required": false,
+    "approved_by": null
+  },
+  "artifacts": [
+    "evidence/dry-run-report.md"
+  ]
+}

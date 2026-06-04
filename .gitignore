@@ -1,0 +1,18 @@
+# Local secrets and environment files
+.env
+.env.*
+*.pem
+*.key
+*.token
+
+# Logs and local artifacts
+*.log
+tmp/
+dist/
+coverage/
+node_modules/
+
+# Session or credential snapshots
+*.session.json
+*.cookies.json
+*.auth.json
